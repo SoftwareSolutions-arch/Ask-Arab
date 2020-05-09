@@ -1,0 +1,48 @@
+<ion-menu [content]="content" type="overlay">
+  <ion-content class="set-background">
+    <ion-item padding class="set-background user-block" no-lines>
+      <ion-avatar (click)="openMyProfile(false)" item-start>
+        <img class="user-img" src="{{userImage}}">
+      </ion-avatar>
+      <h2 (click)="openMyProfile(false)" class="white" style="font-style: italic;">{{fullName}}</h2>
+      <div (click)="editProfile()" class="white" style="margin-top: 10px"><a style="padding-right: 10pt"><ion-icon class="white" name="md-create"></ion-icon></a><span class="edit-profile">Edit Profile</span></div>
+    </ion-item>
+    <div class="saparator"></div>
+    <ion-list padding class="options-list">
+      <ion-item (click)="openPage({ title: 'Home', pageName: 'TabsPage', index: 0 }, true)" margin-top class="set-background" no-lines>
+        <ion-icon class="left-option-icon" item-left name="ios-home"></ion-icon>
+        <h2 class="option-label">Home</h2>
+      </ion-item>
+      <ion-item (click)="openPage({ title: 'Home', pageName: 'QuestionAnswerPage'}, true)" class="set-background" no-lines>
+        <ion-icon class="left-option-icon" item-left name="md-chatboxes"></ion-icon>
+        <h2 class="option-label">Your Question/Answer</h2>
+      </ion-item>
+      <ion-item (click)="openPage({ title: 'Home', pageName: 'ArticlePage', index: 2 },true)" class="set-background" no-lines>
+        <ion-icon class="left-option-icon" item-left name="md-document"></ion-icon>
+        <h2 class="option-label">Article</h2>
+      </ion-item>
+      <ion-item class="set-background" no-lines>
+        <ion-icon style="font-weight: bold" class="left-option-icon" item-left name="ios-list"></ion-icon>
+        <h2 class="option-label">Categories</h2>
+      </ion-item>
+      <ion-item (click)="openPage({ title: 'Home', pageName: 'NotificationPage', index: 3 },true)" class="set-background" no-lines>
+        <ion-icon class="left-option-icon" item-left name="md-notifications"></ion-icon>
+        <h2 class="option-label">Notifications</h2>
+      </ion-item>
+      <ion-item (click)="openPage({ title: 'Home', pageName: 'SettingsPage'},true)" class="set-background" no-lines>
+        <ion-icon class="left-option-icon" item-left name="md-settings"></ion-icon>
+        <h2 class="option-label">Settings</h2>
+      </ion-item>
+      <ion-item class="set-background" no-lines>
+        <ion-icon class="left-option-icon" item-left name="md-share"></ion-icon>
+        <h2 class="option-label">Share App</h2>
+      </ion-item>
+      <ion-item (click)="logout()" class="set-background" no-lines>
+        <ion-icon class="left-option-icon" item-left name="ios-exit"></ion-icon>
+        <h2 class="option-label">Logout</h2>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-nav #content [root]="rootPage"></ion-nav>

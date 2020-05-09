@@ -1,0 +1,81 @@
+<ion-header>
+  <ion-navbar>
+    <ion-buttons float-left>
+      <button menuToggle>
+        <ion-icon class="header-icon" name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title text-center>{{ 'SETTINGS_TITLE' | translate }}</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="openMyProfile(false)">
+        <ion-icon class="white header-icon" name="md-person"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content margin-top>
+  <div margin-top>
+    <div class="text-grey heading" style="margin-top: 0px" padding-left>Main Preferences</div>
+    <ion-item no-lines>
+      <div item-left class="small-subheading-size">Language</div>
+      <ion-select [(ngModel)]="laguage" (ionChange)="selectLanguage()" item-right class="small-subheading-size right-align">
+        <ion-option value="default">Default</ion-option>
+        <ion-option value="arabic">Arabic</ion-option>
+      </ion-select>
+<!--      <div class="small-subheading-size" item-right>Default</div>-->
+    </ion-item>
+    <div class="grey-saparator"></div>
+
+    <div class="text-grey heading" padding-left>Appearance</div>
+    <ion-item no-lines>
+      <ion-label class="small-subheading-size">Night Mode</ion-label>
+      <ion-toggle ></ion-toggle>
+    </ion-item>
+    <div margin-top class="grey-saparator"></div>
+
+    <div class="text-grey heading" padding-left>Sound</div>
+    <ion-item no-lines>
+      <ion-label class="small-subheading-size">Notification Sound</ion-label>
+      <ion-toggle ></ion-toggle>
+    </ion-item>
+    <div margin-top class="grey-saparator"></div>
+    <button (click)="gotoEditProfile()" class="text-grey" ion-item no-lines icon-end>Edit Profile</button>
+    <button (click)="gotoChangePassword()" class="text-grey" ion-item no-lines icon-end>Change Password</button>
+    <button (click)="deleteAccount()" class="text-grey" ion-item no-lines icon-end>Delete Account</button>
+  </div>
+  <!--<form [formGroup]="form" *ngIf="settingsReady">
+    <ion-list *ngIf="page == 'main'">
+      <ion-item>
+        <ion-label>{{ 'SETTINGS_OPTION1' | translate }}</ion-label>
+        <ion-toggle formControlName="option1"></ion-toggle>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>{{ 'SETTINGS_OPTION2' | translate }}</ion-label>
+        <ion-input formControlName="option2"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>{{ 'SETTINGS_OPTION3' | translate }}</ion-label>
+        <ion-select formControlName="option3">
+          <ion-option value="1" checked="true">1</ion-option>
+          <ion-option value="2">2</ion-option>
+          <ion-option value="3">3</ion-option>
+        </ion-select>
+      </ion-item>
+
+      <button ion-item [navPush]="subSettings" [navParams]="profileSettings">
+        {{ 'SETTINGS_PROFILE_BUTTON' | translate }}
+      </button>
+    </ion-list>
+
+    <ion-list *ngIf="page == 'profile'">
+      <ion-item>
+        <ion-label>{{ 'SETTINGS_OPTION4' | translate }}</ion-label>
+        <ion-input formControlName="option4"></ion-input>
+      </ion-item>
+    </ion-list>
+  </form>-->
+
+</ion-content>

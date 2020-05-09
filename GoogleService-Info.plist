@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>743475747051-3dr9bk95hrvldt179pkj36em97if22if.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.743475747051-3dr9bk95hrvldt179pkj36em97if22if</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>743475747051-i4t4ktsoe72a7f06jg7af28utdht5i8o.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBZ95b846FrXVeZz_VvpVjE3s68xV8wfRQ</string>
+	<key>GCM_SENDER_ID</key>
+	<string>743475747051</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.alpha.askarabgt</string>
+	<key>PROJECT_ID</key>
+	<string>askarabgt</string>
+	<key>STORAGE_BUCKET</key>
+	<string>askarabgt.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:743475747051:ios:0489f991799dc7dfc1c6ae</string>
+	<key>DATABASE_URL</key>
+	<string>https://askarabgt.firebaseio.com</string>
+</dict>
+</plist>

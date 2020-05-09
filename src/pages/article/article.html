@@ -1,0 +1,77 @@
+<ion-header>
+  <ion-navbar>
+    <ion-buttons float-left>
+      <button menuToggle>
+        <ion-icon class="header-icon" name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title text-center>Articles</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="openMyProfile(false)">
+        <ion-icon class="white header-icon" name="md-person"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-item margin-top padding no-lines text-wrap>
+    <img (click)="openReadArticle()" margin-right item-start class="article-img" src="assets/img/article1.png">
+    <h2 (click)="openReadArticle()">How can you clean the car sprays yourself?</h2>
+    <div margin-top class="row">
+      <div text-wrap no-padding col-4 text-left><a class="set-small-icon"><ion-icon class="text-grey" name="ios-person"></ion-icon></a><span class="text-grey small-text">Writer Name</span></div>
+      <div text-wrap no-padding col-4 text-center><a class="set-small-icon"><ion-icon class="text-grey" name="ios-chatbubbles"></ion-icon></a><span class="text-grey small-text">05 Comments</span></div>
+      <div text-wrap no-padding col-4 text-right><a class="set-small-icon"><ion-icon style="font-weight: bold" class="text-grey" name="ios-list"></ion-icon></a><span class="text-grey small-text">Category</span></div>
+    </div>
+  </ion-item>
+  <div class="grey-saparator"></div>
+
+  <ion-item margin-top padding no-lines text-wrap>
+    <img (click)="openReadArticle()" margin-right item-start class="article-img" src="assets/img/article2.png">
+    <h2 (click)="openReadArticle()">How can you clean the car sprays yourself?</h2>
+    <div margin-top class="row">
+      <div text-wrap no-padding col-4 text-left><a class="set-small-icon"><ion-icon class="text-grey" name="ios-person"></ion-icon></a><span class="text-grey small-text">Writer Name</span></div>
+      <div text-wrap no-padding col-4 text-center><a class="set-small-icon"><ion-icon class="text-grey" name="ios-chatbubbles"></ion-icon></a><span class="text-grey small-text">05 Comments</span></div>
+      <div text-wrap no-padding col-4 text-right><a class="set-small-icon"><ion-icon style="font-weight: bold" class="text-grey" name="ios-list"></ion-icon></a><span class="text-grey small-text">Category</span></div>
+    </div>
+  </ion-item>
+  <div class="grey-saparator"></div>
+
+  <ion-item margin-top padding no-lines text-wrap>
+    <img (click)="openReadArticle()" margin-right item-start class="article-img" src="assets/img/article3.png">
+    <h2 (click)="openReadArticle()">How can you clean the car sprays yourself?</h2>
+    <div margin-top class="row">
+      <div text-wrap no-padding col-4 text-left><a class="set-small-icon"><ion-icon class="text-grey" name="ios-person"></ion-icon></a><span class="text-grey small-text">Writer Name</span></div>
+      <div text-wrap no-padding col-4 text-center><a class="set-small-icon"><ion-icon class="text-grey" name="ios-chatbubbles"></ion-icon></a><span class="text-grey small-text">05 Comments</span></div>
+      <div text-wrap no-padding col-4 text-right><a class="set-small-icon"><ion-icon style="font-weight: bold" class="text-grey" name="ios-list"></ion-icon></a><span class="text-grey small-text">Category</span></div>
+    </div>
+  </ion-item>
+  <div class="grey-saparator"></div>
+
+  <ion-item margin-top padding no-lines text-wrap>
+    <img (click)="openReadArticle()" margin-right item-start class="article-img" src="assets/img/article1.png">
+    <h2 (click)="openReadArticle()">How can you clean the car sprays yourself?</h2>
+    <div margin-top class="row">
+      <div text-wrap no-padding col-4 text-left><a class="set-small-icon"><ion-icon class="text-grey" name="ios-person"></ion-icon></a><span class="text-grey small-text">Writer Name</span></div>
+      <div text-wrap no-padding col-4 text-center><a class="set-small-icon"><ion-icon class="text-grey" name="ios-chatbubbles"></ion-icon></a><span class="text-grey small-text">05 Comments</span></div>
+      <div text-wrap no-padding col-4 text-right><a class="set-small-icon"><ion-icon style="font-weight: bold" class="text-grey" name="ios-list"></ion-icon></a><span class="text-grey small-text">Category</span></div>
+    </div>
+  </ion-item>
+  <div class="grey-saparator"></div>
+
+  <ion-item margin-top padding no-lines text-wrap>
+    <img (click)="openReadArticle()" margin-right item-start class="article-img" src="assets/img/article1.png">
+    <h2 (click)="openReadArticle()">How can you clean the car sprays yourself?</h2>
+    <div margin-top class="row">
+      <div text-wrap no-padding col-4 text-left><a class="set-small-icon"><ion-icon class="text-grey" name="ios-person"></ion-icon></a><span class="text-grey small-text">Writer Name</span></div>
+      <div text-wrap no-padding col-4 text-center><a class="set-small-icon"><ion-icon class="text-grey" name="ios-chatbubbles"></ion-icon></a><span class="text-grey small-text">05 Comments</span></div>
+      <div text-wrap no-padding col-4 text-right><a class="set-small-icon"><ion-icon style="font-weight: bold" class="text-grey" name="ios-list"></ion-icon></a><span class="text-grey small-text">Category</span></div>
+    </div>
+  </ion-item>
+  <div class="grey-saparator"></div>
+
+  <ion-fab bottom right edge (click)="gotoWriteArticle()">
+    <button ion-fab mini><ion-icon name="add"></ion-icon></button>
+  </ion-fab>
+
+</ion-content>

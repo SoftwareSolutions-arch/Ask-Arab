@@ -1,0 +1,96 @@
+page-question-answer {
+  .segment-md .segment-button{
+    color: #5F5F5F;
+    font-weight: bold;
+  }
+
+  .segment-md .segment-button.segment-activated{
+    font-weight: bold;
+    color: #CD1C2B;
+  }
+
+  .segment-ios .segment-button {
+    color: #5F5F5F;
+    font-weight: bold;
+    border: none;
+    border-bottom: 1px solid #5F5F5F;
+  }
+  .segment-ios .segment-button.segment-activated{
+    color: #CD1C2B;
+    font-weight: bold;
+    border: none;
+    background: transparent;
+    border-bottom: 1px solid #CD1C2B;
+  }
+
+  .profile-user{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+  }
+  .question-text{
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  .option-div{
+    margin: 5px 0px;
+  }
+  .set-small-icon{
+    padding-right: 4pt;font-size: 1rem;
+  }
+  .small-text{
+    font-size: 1rem
+  }
+
+  .comment-like-div{
+    margin-top: 20pt;
+    .label-md, .label-ios{
+      margin-right: 0px !important;
+    }
+    .user-main{
+      height: 55px;
+      width: 55px;
+      border-radius: 50%;
+      margin-top: 17pt;
+      border: 1px solid yellow;
+    }
+    .set-small-icon{
+      padding-right: 4pt;font-size: 0.8rem
+    }
+    .small-text{
+      font-size: 0.8rem
+    }
+
+    .commenter-div{
+      padding-left: 50pt;
+      .image-comment-div{
+        top: 10px;
+        position: absolute;
+        .name-div{
+          width: 55px;
+          white-space: pre-wrap;
+          font-size: 1rem;color: #CD1C2B;
+        }
+      }
+      .user-commenter{
+        height: 45px;
+        width: 45px;
+        margin-left: 8px;
+        border-radius: 50%;
+        border: 1px solid green;
+        margin-bottom: 0px !important;
+      }
+
+      .send-btn{
+        position: absolute;
+        right: 12pt;
+        top: 5px;
+        font-size: 1.2rem;
+        font-weight: bold;
+      }
+    }
+    .read-more{
+      font-size: 1.1rem;color: #CD1C2B;
+    }
+  }
+}

@@ -1,0 +1,81 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title text-center>Read Article</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="openMyProfile()">
+        <ion-icon class="white header-icon" name="md-person"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+<img src="assets/img/article-banner.png">
+  <div class="row option-div">
+    <div no-padding col-4 text-left><a class="set-small-icon"><ion-icon class="text-grey" name="md-calendar"></ion-icon></a><span class="text-grey small-text">12 March 2020</span></div>
+    <div (click)="gotoOtherProfile()" no-padding col-4 text-center><a class="set-small-icon"><ion-icon class="text-grey" name="ios-person"></ion-icon></a><span class="text-grey small-text">Writer Name</span></div>
+    <div no-padding col-4 text-right><a class="set-small-icon"><ion-icon class="text-grey" name="ios-chatbubbles"></ion-icon></a><span class="text-grey small-text">3 Comments</span></div>
+  </div>
+  <div style="margin-top: 10px" class="grey-saparator"></div>
+  <div class="header-txt">How can you clean the car sprays yourself?</div>
+  <p class="small-text text-grey">I will talk a little about the mechanism of the work of car sprays,
+
+    and then I will explain the process of cleaning car sprays, where the My werk te pumpe into the combustion chamber in the engine by implementing some of the orders issued by the computer In the cor and then the fuel is sent from the tonk to the combustion
+
+    chamber in the car angin.th the airflow the buggy works on the
+
+    combustion process and the presence of any mailfunction in the nebulizer leads to a weakness
+    in the car due to the low amount of fuel in the combustion chamber, and this problem also reflects the increased amount of fuel.
+  </p>
+  <div style="margin-top: 15px" class="grey-saparator"></div>
+  <div class="header-txt">Comments (02)</div>
+
+  <ion-item no-margin no-lines>
+    <div item-start>
+      <img class="user-main" src="assets/img/user2.png">
+      <div class="name">Name</div>
+    </div>
+    <div class="row">
+      <div col-4></div><div col-4></div>
+      <div no-padding col-4 text-right><a class="set-small-icon"><ion-icon class="text-grey" name="ios-time-outline"></ion-icon></a><span class="text-grey small-text">a min ago</span></div>
+    </div>
+    <p style="font-size: 1.3rem" text-wrap>But are the cleaning sprays they sell at the stations really helpful?</p>
+    <div text-right>
+      <button ion-button icon-start clear small>
+        <ion-icon name="ios-undo"></ion-icon>
+        <div class="small-text">Reply</div>
+      </button>
+    </div>
+  </ion-item>
+
+  <ion-item no-margin no-lines>
+    <div item-start>
+      <img class="user-main" src="assets/img/user1.png">
+      <div class="name">Name</div>
+    </div>
+    <div class="row">
+      <div col-4></div><div col-4></div>
+      <div no-padding col-4 text-right><a class="set-small-icon"><ion-icon class="text-grey" name="ios-time-outline"></ion-icon></a><span class="text-grey small-text">a min ago</span></div>
+    </div>
+    <p style="font-size: 1.3rem" text-wrap>But are the cleaning sprays they sell at the stations really helpful?</p>
+    <div text-right>
+      <button ion-button icon-start clear small>
+        <ion-icon name="ios-undo"></ion-icon>
+        <div class="small-text">Reply</div>
+      </button>
+    </div>
+  </ion-item>
+  <div style="margin-top: 5px" class="grey-saparator"></div>
+  <div class="header-txt">Add Comments</div>
+  <div class="bottom_textarea">
+    <ion-textarea rows='7' placeholder="Write Comment" class="inner_textarea"></ion-textarea>
+  </div>
+  <ion-item no-lines margin-top margin-bottom>
+    <ion-label class="text-grey small-font">Allow to reply</ion-label>
+    <ion-checkbox style="margin-right: 5pt"></ion-checkbox>
+  </ion-item>
+
+  <div style="margin: 30pt" text-center>
+    <button style="font-size: 1.2rem;font-weight: bold" ion-button round>ASK QUESTION</button>
+  </div>
+
+</ion-content>

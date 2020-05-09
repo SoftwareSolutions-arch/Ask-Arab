@@ -1,0 +1,133 @@
+<ion-header>
+  <ion-navbar>
+    <ion-buttons float-left>
+      <button menuToggle>
+        <ion-icon class="header-icon" name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title text-center>Edit Profile</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="openMyProfile(false)">
+        <ion-icon class="white header-icon" name="md-person"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div class="container" (click)="presentActionSheet()">
+    <p style="text-align: center;">
+      <img class="user-img" src="{{userImage}}">
+    </p>
+    <p class="text-grey" style="text-align: center;">Change Profile Photo</p>
+  </div>
+
+
+  <form [formGroup]="profileForm">
+    <ion-list>
+      <ion-item>
+        <ion-label class="text-grey" style="font-size: 1.2rem" floating>Name</ion-label>
+        <ion-input formControlName="name" class="text-grey" type="text"></ion-input>
+      </ion-item>
+      <div class="error-messages">
+        <ng-container *ngFor="let error of error_messages.name">
+          <div class="error-message"
+               *ngIf="profileForm.get('name').hasError(error.type) && (profileForm.get('name').dirty || profileForm.get('name').touched)">
+            {{ error.message }}
+          </div>
+        </ng-container>
+      </div>
+      <ion-item>
+        <ion-label class="text-grey" style="font-size: 1.2rem" floating>Last Name</ion-label>
+        <ion-input formControlName="lastname" class="text-grey" type="text"></ion-input>
+      </ion-item>
+      <div class="error-messages">
+        <ng-container *ngFor="let error of error_messages.lastname">
+          <div class="error-message"
+               *ngIf="profileForm.get('lastname').hasError(error.type) && (profileForm.get('lastname').dirty || profileForm.get('lastname').touched)">
+            {{ error.message }}
+          </div>
+        </ng-container>
+      </div>
+      <ion-item>
+        <ion-label class="text-grey small-font" floating>Address</ion-label>
+        <ion-input formControlName="address" class="text-grey" type="text"></ion-input>
+      </ion-item>
+      <div class="error-messages">
+        <ng-container *ngFor="let error of error_messages.address">
+          <div class="error-message"
+               *ngIf="profileForm.get('address').hasError(error.type) && (profileForm.get('address').dirty || profileForm.get('address').touched)">
+            {{ error.message }}
+          </div>
+        </ng-container>
+      </div>
+
+      <ion-item margin-top>
+        <select formControlName="country" no-padding class="small-font text-grey">
+          <option value="default">Select Country</option>
+          <option *ngFor="let country of countryList" value="{{country.id}}">{{country.name}}</option>
+          <!--<option value="country2">Country2</option>
+          <option value="country3">Country3</option>-->
+        </select>
+      </ion-item>
+
+      <ion-item margin-top>
+        <select formControlName="state" no-padding class="small-font text-grey">
+          <option value="default">Select State</option>
+          <option value="state1">State1</option>
+          <option value="state2">State2</option>
+          <option value="state3">State3</option>
+        </select>
+      </ion-item>
+
+
+      <ion-item>
+        <ion-label class="text-grey" style="font-size: 1.2rem" floating>Mobile No.</ion-label>
+        <ion-input formControlName="mobilenumber" class="text-grey" type="number"></ion-input>
+      </ion-item>
+      <div class="error-messages">
+        <ng-container *ngFor="let error of error_messages.mobilenumber">
+          <div class="error-message"
+               *ngIf="profileForm.get('mobilenumber').hasError(error.type) && (profileForm.get('mobilenumber').dirty || profileForm.get('mobilenumber').touched)">
+            {{ error.message }}
+          </div>
+        </ng-container>
+      </div>
+
+      <ion-item>
+        <ion-label class="text-grey" style="font-size: 1.2rem" floating>DOB</ion-label>
+        <ion-datetime formControlName="datebirth" class="text-grey" value="1990-02-19"></ion-datetime>
+      </ion-item>
+
+      <div class="error-messages">
+        <ng-container *ngFor="let error of error_messages.datebirth">
+          <div class="error-message"
+               *ngIf="profileForm.get('datebirth').hasError(error.type) && (profileForm.get('datebirth').dirty || profileForm.get('datebirth').touched)">
+            {{ error.message }}
+          </div>
+        </ng-container>
+      </div>
+
+      <ion-item>
+        <ion-label class="text-grey" style="font-size: 1.2rem" floating>My Bio</ion-label>
+        <ion-textarea formControlName="myBio" class="text-grey" rows='3'></ion-textarea>
+      </ion-item>
+
+      <ion-item no-lines>
+        <div class="male-radio" item-left>
+          <input formControlName="gender" type="radio" id="male" name="gender" value="male">
+          <label for="male">Male</label>
+        </div>
+        <div class="female-radio">
+          <input formControlName="gender" type="radio" id="female" name="gender" value="female">
+          <label for="female">Female</label></div>
+      </ion-item>
+    </ion-list>
+  </form>
+
+  <div padding text-center>
+    <button class="save" ion-button round (click)="save()">SAVE AND EXIT</button>
+<!--    <button class="save" ion-button [disabled]="profileForm.invalid" (click)="exit()">Save & Exit</button>-->
+  </div>
+</ion-content>
+

@@ -1,0 +1,22 @@
+page-notification {
+  .user{
+    height: 60px;
+    width: 60px;
+    margin-right: 16pt !important;
+    border-radius: 50%;
+  }
+  .user1{
+    font-size: 5rem;
+    background: #CD1C2B;
+    color: white;
+    padding: 5px;
+    margin: 0 !important;
+    margin-right: 16pt !important;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+  }
+  .item-md ion-icon[item-left] + .item-inner, .item-md ion-icon[item-left] + .item-input, .item-md ion-icon[item-start] + .item-inner, .item-md ion-icon[item-start] + .item-input{
+    margin-left: 0px;
+  }
+}

@@ -1,0 +1,17 @@
+page-article {
+.article-img{
+  height: 80px;
+  width: 80px;
+  border-radius: 10px;
+}
+  .set-small-icon{
+    padding-right: 4px;font-size: 1rem
+  }
+  .small-text{
+    font-size: 0.9rem
+  }
+  ion-fab[bottom][edge] {
+    bottom: 15px;
+  }
+
+}

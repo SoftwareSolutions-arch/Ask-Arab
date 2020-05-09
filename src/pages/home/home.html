@@ -1,0 +1,211 @@
+<ion-header>
+  <ion-navbar>
+    <ion-buttons float-left>
+      <button menuToggle>
+        <ion-icon class="header-icon" name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title text-center>Home</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="openMyProfile(false)">
+        <ion-icon class="white header-icon" name="md-person"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div class="search-div">
+    <ion-item class="rounded-red" no-lines>
+      <ion-input placeholder="Search" class="search-icon text-grey" type="text">
+      </ion-input>
+    </ion-item>
+  </div>
+  <div class="comment-like-div">
+    <ion-item>
+      <img (click)="openMyProfile(true)" item-start class="user-main" src="assets/img/user2.png">
+      <div class="row">
+        <div no-padding col-4 text-left><a class="set-small-icon"><ion-icon class="text-grey" name="md-calendar"></ion-icon></a><span class="text-grey small-text">12 March 2020</span></div>
+        <div no-padding col-4 text-center><a class="set-small-icon"><ion-icon class="text-grey" name="md-chatboxes"></ion-icon></a><span class="text-grey small-text">Answer (01)</span></div>
+        <div no-padding col-4 text-right><a class="set-small-icon"><ion-icon class="text-grey" name="md-help"></ion-icon></a><span class="text-grey small-text">General Question</span></div>
+      </div>
+      <h2>Shaw is turbo, cylinder and cc</h2>
+      <div class="row">
+        <button style="padding:5px" no-margin ion-button icon-start clear small>
+          <ion-icon name="thumbs-up"></ion-icon>
+        </button>
+        <button style="padding:5px" no-margin ion-button icon-start clear small>
+          <ion-icon class="text-grey" name="md-thumbs-down"></ion-icon>
+        </button>
+        <button class="right-button" ion-button icon-start clear small>
+          <ion-icon name="ios-undo"></ion-icon>
+          <div>Submit Answer</div>
+        </button>
+      </div>
+    </ion-item>
+
+    <!--Comment div-->
+    <ion-item no-lines class="commenter-div">
+      <div class="image-comment-div">
+        <img item-start class="user-commenter" src="assets/img/user1.png">
+        <div text-center class="name-div">Name</div>
+      </div>
+
+      <div style="margin-left: 57px">
+        <div text-wrap no-padding text-left>
+        <span class="text-grey" style="font-size: 1rem">I will talk a little about the mechanism of the work of car sprays, and then I will explain the process of cleaning car sprays
+        where the sprays work to pump fuel into the combustion chamber ...</span>
+          <a class="read-more">Read More</a></div>
+        <div class="row">
+          <button style="padding:5px" no-margin ion-button icon-start clear small>
+            <ion-icon name="thumbs-up"></ion-icon>
+          </button>
+          <button style="padding:5px" no-margin ion-button icon-start clear small>
+            <ion-icon class="text-grey" name="md-thumbs-down"></ion-icon>
+          </button>
+          <div no-padding><a class="set-small-icon"><ion-icon class="text-grey" name="md-calendar"></ion-icon></a><span class="text-grey small-text">12 March 2020</span></div>
+          <button (click)="reply()" class="right-button" ion-button icon-start clear small>
+            <ion-icon name="ios-undo"></ion-icon>
+            <div>Reply</div>
+          </button>
+        </div>
+
+        <div *ngIf="isViewAll">
+          <div class="row" text-center>
+            <div col-5></div>
+            <div col-2><div class="grey-saparator"></div></div>
+            <div col-5></div>
+          </div>
+          <div text-center class="view-more">View All Answer</div>
+        </div>
+
+        <!--Reply section-->
+        <div *ngIf="isReplyView">
+          <ion-item no-padding no-lines>
+            <ion-input placeholder="Reply" class="rounded-red text-grey search" type="text">
+            </ion-input>
+          </ion-item>
+          <ion-item>
+            <button (click)="sendReply()" class="send-btn" ion-button small round>SEND</button>
+          </ion-item>
+        </div>
+      </div>
+
+      <!--Reply comment div-->
+      <ion-item *ngIf="isReplyDone" no-lines class="reply-div">
+        <div class="image-reply-div">
+          <img item-start class="user-replier" src="assets/img/user2.png">
+          <div text-center class="name-div">Your Name</div>
+        </div>
+
+        <div style="margin-left: 57px">
+          <div text-wrap no-padding text-left>
+        <span class="text-grey" style="font-size: 1rem">I will talk a little about the mechanism of the work of car sprays, and then I will explain the process of cleaning car sprays
+        where the sprays work ...</span>
+            <a class="read-more">Read More</a></div>
+          <div class="row">
+            <div no-padding><a class="set-small-icon"><ion-icon class="text-grey" name="md-calendar"></ion-icon></a><span class="text-grey small-text">12 March 2020</span></div>
+            <div style="margin-left: 5pt;margin-right: 5pt" no-padding><a class="set-small-icon"><ion-icon class="text-grey" name="md-create"></ion-icon></a><span class="text-grey small-text">Edit</span></div>
+            <div no-padding><a class="set-small-icon"><ion-icon class="text-grey" name="md-trash"></ion-icon></a><span class="text-grey small-text">Delete</span></div>
+          </div>
+        </div>
+      </ion-item>
+    </ion-item>
+
+    <div class="grey-saparator"></div>
+  </div>
+
+  <div class="comment-like-div">
+    <ion-item>
+      <img (click)="openMyProfile(true)" item-start class="user-main" src="assets/img/user2.png">
+      <div class="row">
+        <div no-padding col-4 text-left><a class="set-small-icon"><ion-icon class="text-grey" name="md-calendar"></ion-icon></a><span class="text-grey small-text">12 March 2020</span></div>
+        <div no-padding col-4 text-center><a class="set-small-icon"><ion-icon class="text-grey" name="md-chatboxes"></ion-icon></a><span class="text-grey small-text">Answer (01)</span></div>
+        <div no-padding col-4 text-right><a class="set-small-icon"><ion-icon class="text-grey" name="md-help"></ion-icon></a><span class="text-grey small-text">General Question</span></div>
+      </div>
+      <h2>Shaw is turbo, cylinder and cc</h2>
+      <div class="row">
+        <button style="padding:5px" no-margin ion-button icon-start clear small>
+          <ion-icon name="thumbs-up"></ion-icon>
+        </button>
+        <button style="padding:5px" no-margin ion-button icon-start clear small>
+          <ion-icon class="text-grey" name="md-thumbs-down"></ion-icon>
+        </button>
+        <button class="right-button" ion-button icon-start clear small>
+          <ion-icon name="ios-undo"></ion-icon>
+          <div>Submit Answer</div>
+        </button>
+      </div>
+    </ion-item>
+
+    <!--Comment div-->
+    <ion-item no-lines class="commenter-div">
+      <div class="image-comment-div">
+        <img item-start class="user-commenter" src="assets/img/user1.png">
+        <div text-center class="name-div">Name</div>
+      </div>
+
+      <div style="margin-left: 57px">
+        <div text-wrap no-padding text-left>
+        <span class="text-grey" style="font-size: 1rem">I will talk a little about the mechanism of the work of car sprays, and then I will explain the process of cleaning car sprays
+        where the sprays work to pump fuel into the combustion chamber ...</span>
+          <a class="read-more">Read More</a></div>
+        <div class="row">
+          <button style="padding:5px" no-margin ion-button icon-start clear small>
+            <ion-icon name="thumbs-up"></ion-icon>
+          </button>
+          <button style="padding:5px" no-margin ion-button icon-start clear small>
+            <ion-icon class="text-grey" name="md-thumbs-down"></ion-icon>
+          </button>
+          <div no-padding><a class="set-small-icon"><ion-icon class="text-grey" name="md-calendar"></ion-icon></a><span class="text-grey small-text">12 March 2020</span></div>
+          <button (click)="reply()" class="right-button" ion-button icon-start clear small>
+            <ion-icon name="ios-undo"></ion-icon>
+            <div>Reply</div>
+          </button>
+        </div>
+
+        <div *ngIf="isViewAll">
+          <div class="row" text-center>
+            <div col-5></div>
+            <div col-2><div class="grey-saparator"></div></div>
+            <div col-5></div>
+          </div>
+          <div text-center class="view-more">View All Answer</div>
+        </div>
+
+        <!--Reply section-->
+        <div *ngIf="isReplyView">
+          <ion-item no-padding no-lines>
+            <ion-input placeholder="Reply" class="rounded-red text-grey search" type="text">
+            </ion-input>
+          </ion-item>
+          <ion-item>
+            <button (click)="sendReply()" class="send-btn" ion-button small round>SEND</button>
+          </ion-item>
+        </div>
+      </div>
+
+      <!--Reply comment div-->
+      <ion-item *ngIf="isReplyDone" no-lines class="reply-div">
+        <div class="image-reply-div">
+          <img item-start class="user-replier" src="assets/img/user2.png">
+          <div text-center class="name-div">Your Name</div>
+        </div>
+
+        <div style="margin-left: 57px">
+          <div text-wrap no-padding text-left>
+        <span class="text-grey" style="font-size: 1rem">I will talk a little about the mechanism of the work of car sprays, and then I will explain the process of cleaning car sprays
+        where the sprays work ...</span>
+            <a class="read-more">Read More</a></div>
+          <div class="row">
+            <div no-padding><a class="set-small-icon"><ion-icon class="text-grey" name="md-calendar"></ion-icon></a><span class="text-grey small-text">12 March 2020</span></div>
+            <div style="margin-left: 5pt;margin-right: 5pt" no-padding><a class="set-small-icon"><ion-icon class="text-grey" name="md-create"></ion-icon></a><span class="text-grey small-text">Edit</span></div>
+            <div no-padding><a class="set-small-icon"><ion-icon class="text-grey" name="md-trash"></ion-icon></a><span class="text-grey small-text">Delete</span></div>
+          </div>
+        </div>
+      </ion-item>
+    </ion-item>
+
+    <div class="grey-saparator"></div>
+  </div>
+</ion-content>

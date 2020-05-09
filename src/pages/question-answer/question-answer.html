@@ -1,0 +1,86 @@
+<ion-header>
+  <ion-navbar>
+    <ion-buttons float-left>
+      <button menuToggle>
+        <ion-icon class="header-icon" name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title text-center>Your Question & Answer</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="openMyProfile(false)">
+        <ion-icon class="white header-icon" name="md-person"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-segment [(ngModel)]="segment" (ionChange)="updateSchedule()">
+    <ion-segment-button value="question">
+      Questions (02)
+    </ion-segment-button>
+    <ion-segment-button value="answer">
+      Answers (02)
+    </ion-segment-button>
+  </ion-segment>
+  <div style="margin-top: 20pt" [hidden]="shownSessions > 0">
+    <ion-item no-lines>
+      <img item-left class="profile-user" src="assets/img/user2.png">
+      <div text-wrap class="question-text">
+        <div (click)="gotoQuestionDetail()">What is the reason that causes the car wheel to not return to its normal position?</div>
+        <div>the question</div>
+        <div class="row option-div">
+          <div no-padding col-4 text-left><a class="set-small-icon"><ion-icon class="text-grey" name="md-calendar"></ion-icon></a><span class="text-grey small-text">12 March 2020</span></div>
+          <div no-padding col-4 text-center><a class="set-small-icon"><ion-icon class="text-grey" name="ios-person"></ion-icon></a><span class="text-grey small-text">Writer Name</span></div>
+          <div no-padding col-4 text-right><a class="set-small-icon"><ion-icon class="text-grey" name="ios-chatbubbles"></ion-icon></a><span class="text-grey small-text">3 Comments</span></div>
+        </div>
+      </div>
+    </ion-item>
+    <ion-item no-lines>
+      <img item-left class="profile-user" src="assets/img/user2.png">
+      <div text-wrap class="question-text">
+        <div (click)="gotoQuestionDetail()">What is the reason that causes the car wheel to not return to its normal position?</div>
+        <div>the question</div>
+        <div class="row option-div">
+          <div no-padding col-4 text-left><a class="set-small-icon"><ion-icon class="text-grey" name="md-calendar"></ion-icon></a><span class="text-grey small-text">12 March 2020</span></div>
+          <div no-padding col-4 text-center><a class="set-small-icon"><ion-icon class="text-grey" name="ios-person"></ion-icon></a><span class="text-grey small-text">Writer Name</span></div>
+          <div no-padding col-4 text-right><a class="set-small-icon"><ion-icon class="text-grey" name="ios-chatbubbles"></ion-icon></a><span class="text-grey small-text">3 Comments</span></div>
+        </div>
+      </div>
+    </ion-item>
+  </div>
+  <div [hidden]="shownSessions === 0">
+    <div class="comment-like-div">
+      <ion-item>
+        <img (click)="openMyProfile(true)" item-start class="user-main" src="assets/img/user2.png">
+        <div class="row">
+          <div col-4></div><div col-4></div>
+          <div no-padding col-4 text-left><a class="set-small-icon"><ion-icon class="text-grey" name="md-calendar"></ion-icon></a><span class="text-grey small-text">12 March 2020</span></div>
+          </div>
+        <h2 style="margin-top: 5px">Shaw is turbo, cylinder and cc</h2>
+      </ion-item>
+
+      <!--Comment div-->
+      <ion-item no-lines class="commenter-div">
+        <div class="image-comment-div">
+          <img item-start class="user-commenter" src="assets/img/user1.png">
+          <div text-center class="name-div">Name</div>
+        </div>
+
+        <div style="margin-left: 65px">
+          <div text-wrap no-padding text-left>
+            <span class="text-grey" style="font-size: 1rem">I will talk a little about the mechanism of the work of car sprays,
+              and then I will explain the process of cleaning car sprays...</span>
+            <a class="read-more">Read More</a></div>
+          <div class="row">
+            <div col-4 text-left no-padding><a class="set-small-icon"><ion-icon class="text-grey" name="md-calendar"></ion-icon></a><span class="text-grey small-text">12 March 2020</span></div>
+            <div col-4 text-center no-padding><a class="set-small-icon"><ion-icon class="text-grey" name="md-create"></ion-icon></a><span class="text-grey small-text">Edit</span></div>
+            <div col-4 text-left no-padding><a class="set-small-icon"><ion-icon class="text-grey" name="md-trash"></ion-icon></a><span class="text-grey small-text">Delete</span></div>
+          </div>
+        </div>
+
+      </ion-item>
+    </div>
+  </div>
+
+</ion-content>

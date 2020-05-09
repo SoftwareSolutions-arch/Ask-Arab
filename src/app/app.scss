@@ -1,0 +1,129 @@
+.text-grey{
+  color: #5F5F5F;
+}
+.toolbar-background {
+  background-color: #CD1C2B;
+  color: white;
+}
+.toolbar-title-ios, .toolbar-title-md{
+  color: white;
+}
+.bar-buttons-md, .bar-buttons-ios{
+  color: white;
+  background-color: #CD1C2B;
+}
+.toolbar-title-md {
+  padding: 10px 12px;
+}
+.header-icon{
+  font-size: 3rem;
+  padding: 4pt;
+}
+h1, h2, .set-Ubuntu-font{
+  font-family: Ubuntu;
+}
+.set-background{
+  background: #CD1C2B
+}
+.rounded-red{
+  border: 1px solid #CD1C2B !important;
+  border-radius: 50px !important;
+}
+.rounded-grey{
+  box-shadow: 1px 3px 4px #c8c7cc;
+  border-radius: 50px;
+}
+
+.button:focus, :focus, :active {
+  outline: none !important;
+}
+
+.button:focus {
+  outline: none !important;
+}
+.button{
+  text-transform: none !important;
+}
+.password-icon {
+  padding: 8pt 3pt 8pt 25pt;
+  font-size: 1.4rem;
+  background-image: url(../assets/img/lock-grey.png);
+  background-size: 1.5rem;
+  background-repeat: no-repeat;
+  background-position: 5pt 50%;
+}
+
+.email-icon {
+  padding: 8pt 3pt 8pt 25pt;
+  font-size: 1.4rem;
+  color: #CD1C2B;
+  background-image: url(../assets/img/person-red.png);
+  background-size: 1.5rem;
+  background-repeat: no-repeat;
+  background-position: 5pt 50%;
+}
+
+.email-icon1 {
+  padding: 8pt 3pt 8pt 25pt;
+  font-size: 1.4rem;
+  background-image: url(../assets/img/mail-grey.png);
+  background-size: 1.5rem;
+  background-repeat: no-repeat;
+  background-position: 5pt 50%;
+}
+.search-icon {
+  padding: 8pt 25pt 8pt 2pt;
+  font-size: 1.4rem;
+  color: #CD1C2B;
+  background-image: url(../assets/img/search-red.png);
+  background-size: 1.5rem;
+  background-repeat: no-repeat;
+  background-position: 95% 10pt;
+}
+.item-md.item-input.ng-invalid.ng-touched:not(.input-has-focus):not(.item-input-has-focus) .item-inner{
+  border-bottom: none;
+  box-shadow: none;
+}
+.list-md .item-input.item-input-has-focus:last-child, .list-md .item-input.input-has-focus:last-child{
+  box-shadow: inset 0px -1px 0px 0px transparant !important;
+  border-bottom-color: transparent !important;
+}
+.item .item-block .item-md .item-input .input-has-value .item-input-has-value .input-has-focus .item-input-has-focus{
+  border-bottom-color: transparent !important;
+  box-shadow: 1px 3px 4px #c8c7cc !important;
+}
+
+.list-md .item-input.input-has-focus:last-child .item-inner,
+.list-md .item-input.ng-valid.input-has-value:not(.input-has-focus):last-child .item-inner,
+.list-md .item-input.ng-invalid.ng-touched:not(.input-has-focus):last-child .item-inner {
+  box-shadow: none;
+}
+.item-md.item-input.ng-valid.item-input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner, .item-md.item-input.ng-valid.input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner{
+  border-bottom-color: transparent !important;
+  -webkit-box-shadow: none;
+  box-shadow:none;
+}
+.item-md.item-input.input-has-focus .item-inner {
+  border-bottom-color: transparent !important;
+  box-shadow: none !important;
+}
+.grey-saparator{
+  height: 1px;
+  background: #dedede;
+}
+.small-font{
+  font-size: 1.2rem;
+}
+.back-button-text, .back-button-icon-ios, .back-button-icon-md{
+  color: white;
+}
+.white{
+  color: white;
+}
+
+/*.list-md .item-input.ng-valid.item-input-has-value:not(.input-has-focus):not(.item-input-has-focus):last-child, .list-md .item-input.ng-valid.input-has-value:not(.input-has-focus):not(.item-input-has-focus):last-child{
+  border: 1px solid #CD1C2B !important;
+}
+.list-md .item-input:last-child{
+
+}*/

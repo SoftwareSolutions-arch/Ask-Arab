@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-navbar>
+    <ion-buttons float-left>
+      <button menuToggle>
+        <ion-icon class="header-icon" name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title text-center>Notifications</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="openMyProfile(false)">
+        <ion-icon class="white header-icon" name="md-person"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item margin-top no-lines>
+    <ion-icon item-start class="user1" name="ios-notifications"></ion-icon>
+    <h2>Update your app now</h2>
+    <div text-wrap class="text-grey" style="font-size: 1.2rem">Lorem ipsum is simply dummy text of the printing typesetting industry.</div>
+  </ion-item>
+  <ion-item margin-top no-lines>
+    <img item-start class="user" src="assets/img/user2.png">
+    <h2>John Answered Your Question</h2>
+    <div text-wrap class="text-grey" style="font-size: 1.2rem">Lorem ipsum is simply dummy text of the printing typesetting industry.</div>
+  </ion-item>
+</ion-content>

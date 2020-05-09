@@ -1,0 +1,90 @@
+page-home {
+  .text-input-md, .text-input-ios{
+    margin: 0;
+  }
+  .search-div{
+    padding: 20pt;
+  }
+  .comment-like-div{
+    .label-md, .label-ios{
+      margin-right: 0px !important;
+    }
+    .user-main{
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+      border: 1px solid yellow;
+    }
+    .set-small-icon{
+      padding-right: 4pt;font-size: 0.8rem
+    }
+    .small-text{
+      font-size: 0.8rem
+    }
+    .right-button{
+      right: 5px;
+      position: absolute;
+      font-size: 1rem;
+    }
+
+    .commenter-div{
+      padding-left: 50pt;
+      .image-comment-div{
+        top: 10px;
+        position: absolute;
+        .name-div{
+          width: 55px;
+          white-space: pre-wrap;
+          font-size: 1rem;color: #CD1C2B;
+        }
+      }
+      .user-commenter{
+        height: 40px;
+        width: 40px;
+        margin-left: 8px;
+        border-radius: 50%;
+        border: 1px solid green;
+        margin-bottom: 0px !important;
+      }
+
+      .send-btn{
+        position: absolute;
+        right: 12pt;
+        top: 5px;
+        font-size: 1.2rem;
+        font-weight: bold;
+      }
+    }
+    .read-more{
+      font-size: 1.1rem;color: #CD1C2B;
+    }
+
+    .reply-div{
+      .image-reply-div{
+        top: 10px;
+        position: absolute;
+        .name-div{
+          width: 55px;
+          white-space: pre-wrap;
+          font-size: 1rem;color: #CD1C2B;
+        }
+      }
+      .user-replier{
+        height: 36px;
+        width: 36px;
+        margin-left: 8px;
+        border-radius: 50%;
+        margin-bottom: 0px !important;
+      }
+    }
+  }
+  .view-more{
+    font-size: 1rem;color: #CD1C2B;
+  }
+  .search{
+    font-size: 1.2rem;
+    padding: 5pt;
+    padding-left: 15pt;
+  }
+
+}

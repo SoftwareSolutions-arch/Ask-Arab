@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title text-center>Your Question & Answer</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="openMyProfile(false)">
+        <ion-icon class="white header-icon" name="md-person"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div style="margin: 20pt 15pt">
+    <div class="medium-text">What is the reason that causes the car wheel to not return to its normal position?</div>
+    <div class="medium-text">the question</div>
+  </div>
+    <div class="row">
+      <div col-4 text-center no-padding><a class="set-small-icon"><ion-icon class="text-grey" name="ios-chatbubbles"></ion-icon></a><span class="text-grey small-text">Answer (01)</span></div>
+      <div col-4 text-center no-padding><a class="set-small-icon"><ion-icon class="text-grey" name="md-create"></ion-icon></a><span class="text-grey small-text">Edit</span></div>
+      <div col-4 text-center no-padding><a class="set-small-icon"><ion-icon class="text-grey" name="md-trash"></ion-icon></a><span class="text-grey small-text">Delete</span></div>
+    </div>
+  <div style="margin-top: 20pt;margin-bottom: 10pt" class="grey-saparator"></div>
+  <div class="row" margin-left>
+    <div class="medium-text" col-4>
+      <div class="set-margin">Total Views</div>
+      <div class="set-margin">Category</div>
+      <div class="set-margin">Total Likes</div>
+      <div class="set-margin">Total DisLikes</div>
+    </div>
+    <div class="medium-text" col-2>
+      <div class="set-margin">:</div>
+      <div class="set-margin">:</div>
+      <div class="set-margin">:</div>
+      <div class="set-margin">:</div>
+    </div>
+    <div class="medium-text" col-6>
+      <div class="set-margin"><span>638</span><a style="margin-left: 10px"><ion-icon name="ios-eye"></ion-icon></a></div>
+      <div class="set-margin"><span>General Question</span><a style="margin-left: 10px"><ion-icon name="md-help"></ion-icon></a></div>
+      <div class="set-margin"><span>963</span><a style="margin-left: 10px"><ion-icon name="md-thumbs-up"></ion-icon></a></div>
+      <div class="set-margin"><span>39</span><a style="margin-left: 10px"><ion-icon name="md-thumbs-down"></ion-icon></a></div>
+    </div>
+  </div>
+  <div style="margin-top: 20pt;margin-bottom: 20pt" class="grey-saparator"></div>
+  <div style="margin: 35pt" text-center><button (click)="done()" class="done-btn" ion-button clear round>THE SOLUTION WAS DONE</button></div>
+</ion-content>

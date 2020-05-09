@@ -1,0 +1,46 @@
+page-read-article {
+  .option-div{
+    margin: 5px 0px;
+  }
+  .set-small-icon{
+    padding-right: 4pt;font-size: 1rem;
+  }
+  .small-text{
+    font-size: 1rem
+  }
+  .header-txt{
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin: 10px 0px;
+  }
+
+  .right-button{
+    right: 5px;
+    position: absolute;
+    font-size: 1rem;
+  }
+  .user-main{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+  }
+  .name{
+    color: #CD1C2B;
+    font-size: 1.2rem;
+    width: 60px;
+    white-space: normal;
+  }
+  .item-md [item-left], .item-md [item-right], .item-md [item-start], .item-md [item-end]{
+    margin: 0 !important;
+  }
+
+  .bottom_textarea{
+    margin: 10pt 0pt;
+  }
+  .inner_textarea.input {
+    height: 170px;
+    border-radius: 20px;
+    padding: 8pt;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+}

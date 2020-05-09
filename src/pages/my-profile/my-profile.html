@@ -1,0 +1,88 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title text-center>{{isOtherUserProfile?'Profile':'My Profile'}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+<div>
+  <ion-item no-lines>
+    <img item-left class="user-profile" src="assets/img/user2.png">
+    <div style="margin-left: 10px">
+      <h2 style="font-weight: bold">User Full Name</h2>
+      <div style="margin-top: 7px" class="row">
+        <div no-padding col-6 text-left><a class="small-font"><ion-icon name="md-pin"></ion-icon></a><span class="text-grey set-left-margin small-font">Jordon</span></div>
+        <div no-padding col-6 text-left><a class="small-font"><ion-icon name="md-calendar"></ion-icon></a><span class="text-grey small-font set-left-margin">12 March 2020</span></div>
+      </div>
+      <div style="margin-top: 7px" class="row">
+        <div no-padding col-6 text-left><a class="small-font"><ion-icon name="ios-man"></ion-icon></a><span class="text-grey small-font set-left-margin">Male</span></div>
+        <div no-padding col-6 text-left><a class="small-font"><ion-icon name="md-heart"></ion-icon></a><span class="text-grey small-font set-left-margin">25 Years</span></div>
+      </div>
+    </div>
+  </ion-item>
+  <p text-center class="small-font text-grey">I was born in Syria and specialized in the field of graphic design, but my love for cars since childhood made me
+  interested in car designs adn I become interested in everything related to car</p>
+  <!--division for my profile-->
+  <div *ngIf="!isOtherUserProfile" text-center class="row followers-following-div">
+    <div padding col-6>
+      <div class="count">63k</div>
+      <div class="small-font" style="margin-top: 5px">Followers</div>
+    </div>
+    <div padding col-6>
+      <div class="count">53k</div>
+      <div class="small-font" style="margin-top: 5px">Following</div>
+    </div>
+  </div>
+  <!--division for other user profile-->
+  <div *ngIf="isOtherUserProfile" text-center class="row follow-ask-question-div">
+    <div col-6>
+      <button class="small-font follow-btn" ion-button round>FOLLOW</button>
+    </div>
+    <div col-6>
+      <button (click)="openAskQuestion()" class="ask-question-btn small-font" ion-button round clear>ASK QUESTION</button>
+    </div>
+  </div>
+
+  <h3 style="font-weight: bold;font-family: Ubuntu;" text-center>My stats</h3>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-item class="border-rect small-font" no-lines>
+          <span item-left>ANSWERS</span>
+          <span item-right>(56)</span>
+        </ion-item>
+      </ion-col>
+      <ion-col>
+        <ion-item class="border-rect small-font" no-lines>
+          <span item-left>QUESTIONS</span>
+          <span item-right>(56)</span>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item class="border-rect small-font" no-lines>
+          <span item-left>COMMENTS</span>
+          <span item-right>(03)</span>
+        </ion-item>
+      </ion-col>
+      <ion-col>
+        <ion-item class="border-rect small-font" no-lines>
+          <span item-left>QUESTIONS ASK</span>
+          <span item-right>(06)</span>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item class="border-rect small-font" no-lines>
+          <span item-left>BEST ANSWERS</span>
+          <span item-right>(03)</span>
+        </ion-item>
+      </ion-col>
+      <ion-col padding-left>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</div>
+</ion-content>
